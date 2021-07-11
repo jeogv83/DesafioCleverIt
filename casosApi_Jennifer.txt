@@ -1,0 +1,74 @@
+Caso 1: Validar la respuesta del servicio al ingresar la fecha de vencimiento en el request con formato "AAAA-MM-DD"
+Pasos: 
+1. Ingresar a postman
+2.- Ingresar el endpoint
+3.- Seleccionar metodo POST 
+4. ingresar "expirationDate" en el request con formato "AAAA-MM-DD"
+5.-Click en boton send
+El servicio responde estatus 200 oK
+
+Caso 2: Validar la respuesta del servicio al ingresar la fecha de vencimiento con formato incorrecto
+Pasos: 
+1. Ingresar a postman
+2.- Ingresar el endpoint
+3.- Seleccionar metodo POST 
+4. ingresar "expirationDate" en el request con formato "DD-MM-AA"
+5.-Click en boton send
+El servicio responde con estatus 4XX Formato incorrecto
+
+
+Caso 3: Validar la respuesta del servicio al ingresar el DNI en el request con el formato correcto
+Pasos: 
+1. Ingresar a postman
+2.- Ingresar el endpoint
+3.- Seleccionar metodo POST 
+4. ingresar "dni" en el request con el formato correcto
+5.-Click en boton send
+El servicio responde estatus 200 oK
+
+Caso 4: Validar la respuesta del servicio al ingresar el DNI con el formato incorrecto
+Pasos: 
+1. Ingresar a postman
+2.- Ingresar el endpoint
+3.- Seleccionar metodo POST 
+4. ingresar "dni" en el request con formato "12%%4$$#(("
+5.-Click en boton send
+El servicio responde con estatus 400 Bad Request
+
+
+Caso 5: Validar la respuesta del servicio al no conseguir datos para un "agreement" 
+Pasos: 
+1. Ingresar a postman
+2.- Ingresar el endpoint
+3.- Seleccionar metodo POST 
+4. ingresar en el request en el campo"agreement:10000" 
+5.-Click en boton send
+El servicio responde con estatus 204, response queda vacío
+
+
+Caso 5: Validar la respuesta del servicio al ingresar caracteres especiales en el campo monto
+Pasos: 
+1. Ingresar a postman
+2.- Ingresar el endpoint
+3.- Seleccionar metodo POST 
+4. ingresar en el request en el campo "amount: #"$$!" 
+5.-Click en boton send
+El servicio responde con estatus 400 Bad Request
+
+Caso 6: Validar la respuesta del servicio al presentarse un error de comunicación
+Pasos: 
+1. Ingresar a postman
+2.- Ingresar el endpoint
+3.- Seleccionar metodo POST 
+4. Body en el request con los campos correctos
+5.-Click en boton send
+El servicio responde con estatus 5XX
+
+Caso 7: Validar la respuesta del servicio al ingresar endpoint URL incorrecta
+1. Ingresar a postman
+2.- Ingresar el endpoint URL incorrecta
+3.- Seleccionar metodo POST 
+4. Body en el request con los campos correctos
+5.-Click en boton send
+El servicio responde con estatus 4XX
+
